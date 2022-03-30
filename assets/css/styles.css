@@ -11350,6 +11350,12 @@ body,html{
   opacity: 0;
 }
 
+#imgscale:hover
+{
+  transition-duration: .3s;
+  transform: scale(1.2);
+}
+
 @media (max-width: 1500px){
 .carousel__prev{
   margin-top: -300px;
