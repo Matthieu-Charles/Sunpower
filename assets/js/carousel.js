@@ -38,7 +38,7 @@
                 this.createNavigation()
                 this.moveCallbacks.forEach(cb => cb(0)) // Je veux que tu parcour tout les callbacks et que les appel individuellement. elle passe les calback les un apres les autres en lui passent l'index courant 
                 this.onWindowResize() //on appelle la fonction des le debut de la page 
-                Window.addEventListener('resize', this.onWindowResize.bind(this)) //évenement qui prend en compte la dimention de la fenetre
+                window.addEventListener('resize', this.onWindowResize.bind(this)) //évenement qui prend en compte la dimention de la fenetre
             }
 
 
