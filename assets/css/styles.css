@@ -11289,7 +11289,10 @@ textarea.form-control-lg {
 
 
 /* CAROUSEL */
-
+body,html{
+  min-width: 100%;
+  overflow-x: hidden;
+}
 .carousel{
   position: relative;
 }
@@ -11317,7 +11320,7 @@ textarea.form-control-lg {
   background-size: 50px 50px;
   border-radius: 50%;
   margin-top: -500px;
-  right: 0;
+  right: 5px;
   box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a;
   cursor: pointer;
   transition-duration: .3s;
@@ -11332,7 +11335,7 @@ textarea.form-control-lg {
   background-size: 50px 50px;
   border-radius: 50%;
   margin-top: -500px;
-  right: 0px;
+  right: 0;
   left: 15px;
   box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a;
   cursor: pointer;
@@ -11343,21 +11346,42 @@ textarea.form-control-lg {
   transform: scale(1.2);
 }
 
-.item{
-  display: flex;
-  
-}
-.item__body{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.item__body p{
- padding-left: 30%;
-}
-
 .carousel__next--hidden,.carousel__prev--hidden{
   opacity: 0;
 }
+
+@media (max-width: 1500px){
+.carousel__prev{
+  margin-top: -300px;
+}
+.carousel__next{
+  margin-top: -300px;
+}
+}
+
+@media (max-width: 1000px){
+  .carousel__prev{
+    margin-top: -400px;
+  }
+  .carousel__next{
+    margin-top: -400px;
+  }
+  }
+  @media (max-width: 780px){
+    .carousel__prev{
+      margin-top: -500px;
+    }
+    .carousel__next{
+      margin-top: -500px;
+    }
+    }
+
+  @media (max-width: 770px){
+    .carousel__prev{
+      margin-top: -800px;
+    }
+    .carousel__next{
+      margin-top: -800px;
+    }
+    }
 
