@@ -12,8 +12,7 @@
     ombrières solaires pour la recharge des véhicules électriques">
     <meta name="theme-color" content="">
     <meta name="msapplication-TileColor" content="">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <script src="./assets/js/carousel.js"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Accueil</title>
 </head>
 
@@ -21,45 +20,43 @@
     <header class="px-5 py-2 shadow-sm" role="banner" id="menu-de-navigation">
         <nav class="navbar navbar-expand-md navbar-light bg-white">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/images/logosun.webp" alt="logo sunpower" width="" height="30">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="./index.html">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="#">Société</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fs-5 text-primary" href="#" id="navbarDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Activités
-                            </a>
-                            <ul class="dropdown-menu text-primary" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item text-primary" href="#">La R&D</a></li>
-                                <li><a class="dropdown-item text-primary" href="#">L'aide au montage de projet</a></li>
-                                <li><a class="dropdown-item text-primary" href="#">Les ombrières solaires</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link fs-5 text-primary"
-                                href="./pages/partenaires.html">Partenaires</a></li>
-                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="#">Nous soutenir</a></li>
-                    </ul>
-
-
-                </div>
-                <div class="btn contact btn-primary">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/images/logosun.webp" alt="logo sunpower" width="" height="30">
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              </button>
+              <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link fs-5 text-primary" href="../index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 text-primary" href="./societe.html">Société</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5 text-primary" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Activités
+                        </a>
+                        <ul class="dropdown-menu text-primary" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-primary" href="./retd.html">La R&D</a></li>
+                            <li><a class="dropdown-item text-primary" href="./montageprojet.html">L'aide au montage de projet</a></li>
+                            <li><a class="dropdown-item text-primary" href="./ombriere.html">Les ombrières solaires</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fs-5 text-primary" href="./pages/partenaires.html">Partenaires</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 text-primary" href="./soutenir.html">Nous soutenir</a></li>
+                </ul>
+                
+                
+              </div>
+              <div class="btn contact btn-primary">
                     <button type="button" class="btn btn-primary text-white" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">
                         Nous contacter
                     </button>
                 </div>
             </div>
-        </nav>
-
+          </nav>
+            
         </nav>
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -175,9 +172,9 @@
             crossorigin="anonymous"></script>
         <script src="../assets/js/style_formulaire.js"></script>
     </header>
-
+    
     <main class="container-fluid py-5" role="main" id="contenu-principal">
-        <div id="carousel1">
+        <!-- <div id="carousel1">
             <div class="item py-5 card mb-3">
                 <div class="row g-0">
                     <div class="item__image col-md-6">
@@ -198,86 +195,59 @@
                                     plus</button>
                             </div>
                         </div>
-
-
-
-
-
-
+    
+    
+    
                     </div>
                 </div>
-
+    
             </div>
+            <div class="item py-5">
+                <div class="item__image">
+                    <img src="./assets/images/ombriere-centreco.webp" alt="image entreprise">
+                </div>
+                <div class="item__body col-4 bg-primary bg-opacity-10">
+                    <div class="item__title">
+                        <h1>Mon titre</h1>
+                    </div>
+                    <div class="item__description">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae facilis minima
+                            necessitatibus odio
+                            id architecto adipisci alias similique quidem magni nihil earum impedit, illo
+                            dignissimos rerum
+                            numquam explicabo vero excepturi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__image">
+                    <img src="./assets/images/ombriere-centreco.webp" alt="image entreprise">
+                </div>
+                <div class="item__body col-4 bg-primary bg-opacity-10">
+                    <div class="item__title">
+                        <h1>Mon titre</h1>
+                    </div>
+                    <div class="item__description">
+                        <p>Quand la technologie rencontre l'écologie, nous ne voyons plus le monde de la même façon
+                            ...</p>
+                    </div>
+                </div>
+            </div> -->
+    
+        </div>
+        <section>
 
+            <figure class="text-center p-5 container">
+                <blockquote class="blockquote">
+                    <p class="fs-1">Quand la technologie rencontre l'écologie, nous ne voyons plus le monde de la même
+                        façon ...</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Le boss de <cite title="Source Title">Sunpower</cite>
+                </figcaption>
+            </figure>
 
-            <div class="item pt-5 card mb-5">
-                <div class="row g-0">
-                    <div class="item__image col-md-7">
-                        <img class="img-fluid rounded-start" src="./assets/images/ombriere-centreco.webp"
-                            alt="image entreprise">
-
-                        <div class="item py-5">
-                            <div class="item__image">
-                                <img src="./assets/images/ombriere-centreco.webp" alt="image entreprise">
-                            </div>
-                            <div class="item__body col-4 bg-primary bg-opacity-10">
-                                <div class="item__title">
-                                    <h1>Mon titre</h1>
-                                </div>
-                                <div class="item__description">
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae facilis minima
-                                        necessitatibus odio
-                                        id architecto adipisci alias similique quidem magni nihil earum impedit, illo
-                                        dignissimos rerum
-                                        numquam explicabo vero excepturi.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="item pt-5 card mb-5">
-                            <div class="row g-0">
-                                <div class="item__image col-md-7">
-                                    <img class="img-fluid rounded-start" src="./assets/images/ombriere-centreco.webp"
-                                        alt="image entreprise">
-
-                                    <div class="item">
-                                        <div class="item__image">
-                                            <img src="./assets/images/ombriere-centreco.webp" alt="image entreprise">
-                                        </div>
-                                        <div class="item__body col-4 bg-primary bg-opacity-10">
-                                            <div class="item__title">
-                                                <h1>Mon titre</h1>
-
-                                            </div>
-                                            <div class="item__description">
-                                                <p>Quand la technologie rencontre l'écologie, nous ne voyons plus le
-                                                    monde de la même façon
-                                                    ...</p>
-                                            </div>
-
-                                        </div>
-
-
-
-                                    </div>
-
-
-                                </div>
-                                <section>
-
-                                    <figure class="text-center p-5 container">
-                                        <blockquote class="blockquote">
-                                            <p class="fs-1">Quand la technologie rencontre l'écologie, nous ne voyons
-                                                plus le monde de la même
-                                                façon ...</p>
-                                        </blockquote>
-                                        <figcaption class="blockquote-footer">
-                                            Le boss de <cite title="Source Title">Sunpower</cite>
-                                        </figcaption>
-                                    </figure>
-
-                                </section>
+        </section>
     </main>
     <footer class="py-5 bg-primary px-5">
         <div class="row">
