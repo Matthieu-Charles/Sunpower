@@ -11378,10 +11378,29 @@ body,html{
 
   @media (max-width: 770px){
     .carousel__prev{
-      margin-top: -800px;
+      margin-top: -500px;
     }
     .carousel__next{
-      margin-top: -800px;
+      margin-top: -500px;
     }
     }
+
+    @media (max-width: 375px){
+      .carousel__prev{
+        margin-top: -550px;
+      }
+      .carousel__next{
+        margin-top: -550px;
+      }
+      }
+
+
+    @media (max-width: 320px){
+      .carousel__prev{
+        margin-top: -600px;
+      }
+      .carousel__next{
+        margin-top: -600px;
+      }
+      }
 
