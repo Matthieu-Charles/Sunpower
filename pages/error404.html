@@ -1,4 +1,3 @@
-<?php include './pages/tarteaucitron.html' ?>
 <!DOCTYPE html>
 <html lang="fr" country="FR">
 
@@ -14,9 +13,8 @@
     <meta name="theme-color" content="">
     <meta name="msapplication-TileColor" content="">
     <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico" />
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <script defer  src="./assets/js/carousel.js"></script>
-    <title>Accueil</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>404 error</title>
 </head>
 
 <body>
@@ -24,7 +22,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="./assets/images/logosun.webp" alt="logo sunpower" width="" height="30">
+                    <img src="../assets/images/logosun.webp" alt="logo sunpower" width="" height="30">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -43,12 +41,13 @@
                             <ul class="dropdown-menu text-primary" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item text-primary" href="#">La R&D</a></li>
                                 <li><a class="dropdown-item text-primary" href="#">L'aide au montage de projet</a></li>
-                                <li><a class="dropdown-item text-primary" href="./pages/ombriere.html">Les ombrières solaires</a></li>
+                                <li><a class="dropdown-item text-primary" href="#">Les ombrières solaires</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link fs-5 text-primary"
                                 href="./pages/partenaires.html">Partenaires</a></li>
-                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="./pages/soutenir.html">Nous soutenir</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="./pages/soutenir.html">Nous
+                                soutenir</a></li>
                     </ul>
 
 
@@ -178,93 +177,32 @@
         <script src="../assets/js/style_formulaire.js"></script>
     </header>
 
-    <main class="container-fluid py-5" role="main" id="contenu-principal">
-        <div id="carousel1">
-            <div class="item p-5 card mb-3">
-                <div class="row g-0">
-                    <div class="item__image col-md-7">
-                        <img class="img-fluid rounded-start" src="./assets/images/ombriere-centreco.webp"
-                            alt="image entreprise">
-                    </div>
-                    <div class="item__body bg-primary bg-opacity-10 col-md-5 d-flex align-items-center">
-                        <div class="item__title card-body p-5">
-                            <h1 class="pb-4 card-title">Mon titre</h1>
-                            <p class="pe-5 card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                                facilis
-                                minima necessitatibus odio
-                                id architecto adipisci alias similique quidem magni nihil earum impedit, illo
-                                dignissimos rerum
-                                numquam explicabo vero excepturi.</p>
-                            <div class="btn contact p-0">
-                                <button class="btn btn-outline-primary border-3 px-5" role="button" type="button">Voir
-                                    plus</button>
-                            </div>
-                        </div>
-                    </div>
+    <main>
+        <div class="card bg-dark text-white py-5 container-md">
+            <img class="card-img img-fluid" src="../assets/images/img404.webp" alt="Card image">
+            <div class="text-center">
+                <h1 class="display-1">Oops !</h1>
+                <h2 class="display-3 pb-5">Il a beau chercher, il ne parvient pas à trouver la page web que vous
+                    cherchez. </h2>
+                    <figcaption class="blockquote-footer fs-3 pb-5">
+                        Erreur <cite title="Source Title">404</cite>  signale que la ressource demandée, généralement une page Web, n'a pas été trouvée.
+                    </figcaption>
+                <div class="btn contact btn-primary">
+                    <button type="button" class="btn btn-primary text-white" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Nous contacter
+                    </button>
+                </div>
+                <div class="btn contact btn-primary">
+                    <button type="button" class="btn btn-primary text-white">
+                        Accueil
+                    </button>
                 </div>
             </div>
-            <div class="item p-5 card mb-3">
-                <div class="row g-0">
-                    <div class="item__image col-md-7">
-                        <img class="img-fluid rounded-start" src="./assets/images/ombriere-centreco.webp"
-                            alt="image entreprise">
-                    </div>
-                    <div class="item__body bg-primary bg-opacity-10 col-md-5 d-flex align-items-center">
-                        <div class="item__title card-body p-5">
-                            <h1 class="pb-4 card-title">Mon titre</h1>
-                            <p class="pe-5 card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                                facilis
-                                minima necessitatibus odio
-                                id architecto adipisci alias similique quidem magni nihil earum impedit, illo
-                                dignissimos rerum
-                                numquam explicabo vero excepturi.</p>
-                            <div class="btn contact p-0">
-                                <button class="btn btn-outline-primary border-3 px-5" role="button" type="button">Voir
-                                    plus</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item p-5 card mb-3">
-                <div class="row g-0">
-                    <div class="item__image col-md-7">
-                        <img class="img-fluid rounded-start" src="./assets/images/ombriere-centreco.webp"
-                            alt="image entreprise">
-                    </div>
-                    <div class="item__body bg-primary bg-opacity-10 col-md-5 d-flex align-items-center">
-                        <div class="item__title card-body p-5">
-                            <h1 class="pb-4 card-title">Mon titre</h1>
-                            <p class="pe-5 card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                                facilis
-                                minima necessitatibus odio
-                                id architecto adipisci alias similique quidem magni nihil earum impedit, illo
-                                dignissimos rerum
-                                numquam explicabo vero excepturi.</p>
-                            <div class="btn contact p-0">
-                                <button class="btn btn-outline-primary border-3 px-5" role="button" type="button">Voir
-                                    plus</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
-        <section>
-
-            <figure class="text-center p-5 container">
-                <blockquote class="blockquote">
-                    <p class="fs-1">Quand la technologie rencontre l'écologie, nous ne voyons
-                        plus le monde de la même
-                        façon ...</p>
-                </blockquote>
-                <figcaption class="blockquote-footer">
-                    Le boss de <cite title="Source Title">Sunpower</cite>
-                </figcaption>
-            </figure>
-
-        </section>
     </main>
+
     <footer class="py-5 bg-primary px-5">
         <div class="row">
             <div class="col-12 col-md pb-5">
