@@ -15,8 +15,35 @@
     <meta name="msapplication-TileColor" content="">
     <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico" />
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <script defer  src="./assets/js/carousel.js"></script>
+    <script defer src="./assets/js/carousel.js"></script>
+    <script defer src="./assets/js/cookies.js"></script>
     <title>Accueil</title>
+    <script src="./tarteaucitron.js-1.9.6/tarteaucitron.js"></script>
+    <script>
+        tarteaucitron.init({
+            "privacyUrl": "", /* URL de la page de la politique de vie privée */
+
+            "hashtag": "#tarteaucitron", /* Ouvrir le panneau contenant ce hashtag */
+            "cookieName": "tarteaucitron", /* Nom du Cookie */
+
+            "orientation": "middle", /* Position de la bannière (top - bottom) */
+            "showAlertSmall": false, /* Voir la bannière réduite en bas à droite */
+            "cookieslist": true, /* Voir la liste des cookies */
+
+            "adblocker": false, /* Voir une alerte si un bloqueur de publicités est détecté */
+            "AcceptAllCta": true, /* Voir le bouton accepter tout (quand highPrivacy est à true) */
+            "highPrivacy": true, /* Désactiver le consentement automatique */
+            "handleBrowserDNTRequest": false, /* Si la protection du suivi du navigateur est activée, tout interdire */
+
+            "removeCredit": false, /* Retirer le lien vers tarteaucitron.js */
+            "moreInfoLink": true, /* Afficher le lien "voir plus d'infos" */
+            "useExternalCss": false, /* Si false, tarteaucitron.css sera chargé */
+
+            //"cookieDomain": ".my-multisite-domaine.fr", /* Cookie multisite */
+
+            "readmoreLink": "/cookiespolicy" /* Lien vers la page "Lire plus" */
+        });
+	</script>
 </head>
 
 <body>
@@ -43,12 +70,14 @@
                             <ul class="dropdown-menu text-primary" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item text-primary" href="#">La R&D</a></li>
                                 <li><a class="dropdown-item text-primary" href="#">L'aide au montage de projet</a></li>
-                                <li><a class="dropdown-item text-primary" href="./pages/ombriere.html">Les ombrières solaires</a></li>
+                                <li><a class="dropdown-item text-primary" href="./pages/ombriere.html">Les ombrières
+                                        solaires</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link fs-5 text-primary"
                                 href="./pages/partenaires.html">Partenaires</a></li>
-                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="./pages/soutenir.html">Nous soutenir</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="./pages/soutenir.html">Nous
+                                soutenir</a></li>
                     </ul>
 
 
@@ -188,16 +217,14 @@
                     </div>
                     <div class="item__body bg-primary bg-opacity-10 col-md-5 d-flex align-items-center">
                         <div class="item__title card-body p-5">
-                            <h1 class="pb-4 card-title">Mon titre</h1>
-                            <p class="pe-5 card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                                facilis
-                                minima necessitatibus odio
-                                id architecto adipisci alias similique quidem magni nihil earum impedit, illo
-                                dignissimos rerum
-                                numquam explicabo vero excepturi.</p>
-                            <div class="btn contact p-0">
-                                <button class="btn btn-outline-primary border-3 px-5" role="button" type="button">Voir
-                                    plus</button>
+                            <h1 class="pb-4 card-title">Les ombrières solaires</h1>
+                            <p class="pe-5 card-text">Découvrez notre nouvelle solution innovante et brevetée d'ombrière
+                                solaire. Sur-mesure, amortie en moins de 10 ans et écologique, cette solution va
+                                révolutionner le paysage urbain et votre rapport à l'énergie
+                            </p>
+                            <div>
+                                <a href="./pages/ombriere.html" class="btn btn-outline-primary border-3 px-5"
+                                    role="button">Voir plus</a>
                             </div>
                         </div>
                     </div>
@@ -206,21 +233,21 @@
             <div class="item p-5 card mb-3">
                 <div class="row g-0">
                     <div class="item__image col-md-7">
-                        <img class="img-fluid rounded-start" src="./assets/images/ombriere-centreco.webp"
+                        <img class="img-fluid rounded-start" src="./assets/images/retd.webp"
                             alt="image entreprise">
                     </div>
                     <div class="item__body bg-primary bg-opacity-10 col-md-5 d-flex align-items-center">
                         <div class="item__title card-body p-5">
-                            <h1 class="pb-4 card-title">Mon titre</h1>
+                            <h1 class="pb-4 card-title">La Recherche et Développement</h1>
                             <p class="pe-5 card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
                                 facilis
                                 minima necessitatibus odio
                                 id architecto adipisci alias similique quidem magni nihil earum impedit, illo
                                 dignissimos rerum
                                 numquam explicabo vero excepturi.</p>
-                            <div class="btn contact p-0">
-                                <button class="btn btn-outline-primary border-3 px-5" role="button" type="button">Voir
-                                    plus</button>
+                            <div>
+                                <a href="./pages/retd.html" class="btn btn-outline-primary border-3 px-5"
+                                    role="button">Voir plus</a>
                             </div>
                         </div>
                     </div>
@@ -229,21 +256,21 @@
             <div class="item p-5 card mb-3">
                 <div class="row g-0">
                     <div class="item__image col-md-7">
-                        <img class="img-fluid rounded-start" src="./assets/images/ombriere-centreco.webp"
+                        <img class="img-fluid rounded-start" src="./assets/images/aide_projet.webp"
                             alt="image entreprise">
                     </div>
                     <div class="item__body bg-primary bg-opacity-10 col-md-5 d-flex align-items-center">
                         <div class="item__title card-body p-5">
-                            <h1 class="pb-4 card-title">Mon titre</h1>
+                            <h1 class="pb-4 card-title">Aide au montage de projet</h1>
                             <p class="pe-5 card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
                                 facilis
                                 minima necessitatibus odio
                                 id architecto adipisci alias similique quidem magni nihil earum impedit, illo
                                 dignissimos rerum
                                 numquam explicabo vero excepturi.</p>
-                            <div class="btn contact p-0">
-                                <button class="btn btn-outline-primary border-3 px-5" role="button" type="button">Voir
-                                    plus</button>
+                            <div>
+                                <a href="./pages/montageprojet.html" class="btn btn-outline-primary border-3 px-5"
+                                    role="button">Voir plus</a>
                             </div>
                         </div>
                     </div>
@@ -345,9 +372,7 @@
                         </svg></a></li>
             </ul>
         </div>
-       
     </footer>
-
 </body>
 
 </html>
