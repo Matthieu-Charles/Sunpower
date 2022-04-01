@@ -19,14 +19,18 @@
                 let children = [].slice.call(element.children)
                 this.isMobile = false
                 this.currentItem = 0 // initialise les item pour la "pagination" du slide
+                this.moveCallbacks = []
+
+                /* Modification du DOM */
+
                 //variable qui sauvegarde les enfants et conserve les element au moment ou le script s'est executer grace a [].slice.call
                 //La méthode slice() renvoie un objet tableau, contenant une copie superficielle (shallow copy) d'une portion du tableau d'origine, la portion est définie par un indice de début et un indice de fin (exclus). Le tableau original ne sera pas modifié.
                 //La méthode call() réalise un appel à une fonction avec une valeur this donnée et des arguments fournis individuellement.
                 this.root = this.createDivWithClass('carousel') //creation d'une div, asigne une class carousel a cette div
                 this.container = this.createDivWithClass('carousel__container')//creation d'une div, asigne une class carousel__container a cette div
+                this.root.setAttribute('tabindex', '0') //Ajoute un nouvel attribut ou change la valeur d'un attribut existant pour l'élément spécifié. Si l'attribut existe déjà, la valeur est mise à jour ; sinon, un nouvel attribut est ajouté avec le nom et la valeur spécifiés.
                 this.root.appendChild(this.container)//on ajoute l'element dans root (dans la div 'carousel')
                 this.element.appendChild(this.root)//on rajoute l'element root dans options
-                this.moveCallbacks = []
                 this.items = children.map((child) => {  //fonction qui parcour les  elements enfant et qui les place dans le carousel__container (=> fait reference a la class)
                     let item = this.createDivWithClass('carousel__item') //creer une div avec une class carousel__item dans les enfants
                     item.appendChild(child) //on rajoute les enfants dans la div que l'on vien de creer
@@ -36,9 +40,18 @@
                 /* Méthode qui met du style au items. Donne les bonne dimentions aux éléments du carousel */
                 this.setStyle()
                 this.createNavigation()
+
+                //Evenement
                 this.moveCallbacks.forEach(cb => cb(0)) // Je veux que tu parcour tout les callbacks et que les appel individuellement. elle passe les calback les un apres les autres en lui passent l'index courant 
                 this.onWindowResize() //on appelle la fonction des le debut de la page 
                 window.addEventListener('resize', this.onWindowResize.bind(this)) //évenement qui prend en compte la dimention de la fenetre
+                this.root.addEventListener('keyup', evenement => { // Quand on relache la pression de la touche 
+                    if (evenement.key === 'ArrowRight' || e.key === 'Right') { // Si la touche qui est utiliser est arrowright ou right pour la compatibiliter avec tout les navigateur
+                        this.next() // Alors on applique la methode next
+                    } else if (evenement.key === 'ArrowLeft' || e.key === 'Left') { // Si la touche qui est utiliser est arrowright Left pour la compatibiliter avec tout les navigateur
+                        this.prev() // Alors on applique la methode prev
+                    }
+                })
             }
 
 
@@ -86,9 +99,17 @@
              */
             goToItem(index) {
                 if (index < 0) {//si l'index est inferieur a 0 alors il revien en arriere
-                    index = this.items.length - this.options.slidesVisible // index est egal au nombre idem - le nombre d'item visible definie en option
-                } else if (index >= this.items.length || (this.items[this.currentItem + this.options.slidesVisible] === undefined && index > this.currentItem)) { //Sinon si index est superieur ou egal au nombre d'item alors ...  ou  si il y'a un item qui correspond a l'item ciblé + le nbr d'item visible et l'index doit etre sup a l'index courent
-                    index = 0  // l'index init a 0
+                    if (this.options.loop) {
+                        index = this.items.length - this.slidesVisible // index est egal au nombre idem - le nombre d'item visible definie en option
+                    } else {
+                        return
+                    }
+                } else if (index >= this.items.length || (this.items[this.currentItem + this.slidesVisible] === undefined && index > this.currentItem)) { //Sinon si index est superieur ou egal au nombre d'item alors ...  ou  si il y'a un item qui correspond a l'item ciblé + le nbr d'item visible et l'index doit etre sup a l'index courent
+                    if (this.options.loop) {
+                        index = 0  // l'index init a 0
+                    } else {
+                        return
+                    }
                 }
                 let translateX = index * -100 / this.items.length // nombre de l'élement ciblé multiplier par 100 divisé par le nombre d'élements pour calculer translate3d
                 this.container.style.transform = 'translate3d(' + translateX + '%, 0, 0)' // Ajoute du style au container (translate3d se calcule en Y X Z )
@@ -103,13 +124,13 @@
                 this.moveCallbacks.push(cb)
             }
 
-            onWindowResize (){ //definie une dimention mobile si la largeur de la fenetre et inferieur a 800
+            onWindowResize() { //definie une dimention mobile si la largeur de la fenetre et inferieur a 800
                 let mobile = window.innerWidth < 800
-                if(mobile !== this.isMobile){// si la valeur de mobile est differente de is mobile
-                this.isMobile = mobile  //alors on change la valeur de la proprieter d'instance   
-                this.setStyle() //est on peut redefinire les styles
-                this.moveCallbacks.forEach(cb => cb(this.currentItem))
-                } 
+                if (mobile !== this.isMobile) {// si la valeur de mobile est differente de is mobile
+                    this.isMobile = mobile  //alors on change la valeur de la proprieter d'instance   
+                    this.setStyle() //est on peut redefinire les styles
+                    this.moveCallbacks.forEach(cb => cb(this.currentItem))
+                }
             }
 
             /**
