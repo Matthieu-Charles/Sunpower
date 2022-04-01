@@ -14,12 +14,12 @@
                 this.options = Object.assign({}, { //si les options ne sont pas present on vas avoir des prolemes donc on fusione cette element avec des options par defaut(on ulitise la méthode asign)
                     slidesToScroll: 1,//propriéte par default
                     slidesVisible: 1,//propriéte par default
-                    loop: false
+                    loop: false //Doit on boucler en fin de carousel ? true ou false (false par default)
                 }, options) // on ajoute options si plus tard on veut rajouter des options
-                let children = [].slice.call(element.children)
-                this.isMobile = false
+                let children = [].slice.call(element.children) // On recupere les enfants HTML a se moment dans l'execution afin d'éviter d'avoir la div carousel qui englobe tout les élement enfants(Convertir Nodelist sous forme de tableaux on utilise la méthode slice puis l'appeler en lui passant en parametre les enfants)
+                this.isMobile = false  // Pour la résolution mobile 
                 this.currentItem = 0 // initialise les item pour la "pagination" du slide
-                this.moveCallbacks = []
+                this.moveCallbacks = [] // création d'un tableau pour parcourir les callbacks avec plus de facilité
 
                 /* Modification du DOM */
 
@@ -125,11 +125,11 @@
             }
 
             onWindowResize() { //definie une dimention mobile si la largeur de la fenetre et inferieur a 800
-                let mobile = window.innerWidth < 800
-                if (mobile !== this.isMobile) {// si la valeur de mobile est differente de is mobile
+                let mobile = window.innerWidth < 800  // Valeur de la resolution pour mobile
+                if (mobile !== this.isMobile) {// si la valeur de mobile est differente de is mobile (false)
                     this.isMobile = mobile  //alors on change la valeur de la proprieter d'instance   
                     this.setStyle() //est on peut redefinire les styles
-                    this.moveCallbacks.forEach(cb => cb(this.currentItem))
+                    this.moveCallbacks.forEach(cb => cb(this.currentItem)) //Quand on est sur un slide en particulier est que l'on change l'item courant alors on parcour tout les callback et on les parcours individuellement
                 }
             }
 
@@ -162,9 +162,9 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             new Carousel(document.querySelector('#carousel1'), {
-                slidesToScroll: 1,
-                slidesVisible: 1,
-                loop: true
+                slidesToScroll: 1, // Combien de slide on scroll dans le carousel
+                slidesVisible: 1, // slide visible dans le carousel
+                loop: true  //boucle en fin de carousel
             })
         })
 
